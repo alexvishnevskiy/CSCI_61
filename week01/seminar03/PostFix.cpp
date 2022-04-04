@@ -5,20 +5,24 @@
 #include <stack>
 #include <sstream>
 #include <iostream>
+#include <cstdlib>
 
-//from 5 5 * + 12 4 -> 5*5+12-4
+
+//from 5 3 + 6 2 / * 3 5 * + -> 39
 void evalPostFix(std::string expPostFix){
     std::stack<double> numbers;
     std::istringstream iss(expPostFix);
 
-    while (!iss.eof(1)){
+    while (!iss.eof()){
         std::string str;
+        double a, b;
         iss >> str;
+
         if (isdigit(str[0]) || str[0] == '.'){ //only works on char
-            numbers.push(std::strtod(str)); //convert string to double
+            numbers.push(std::strtod(str.c_str(), NULL)); //convert string to double
         }else{
-            double a = numbers.top(); numbers.pop();
-            double b = numbers.top(); numbers.pop();
+            a = numbers.top(); numbers.pop();
+            b = numbers.top(); numbers.pop();
             switch(str[0]){
                 case '+':
                     numbers.push(a + b);
@@ -45,38 +49,40 @@ void evalPostFix(std::string expPostFix){
 void infixtoPostfix(std::string expInFix){
     std::stack<char> ops;
     std::istringstream iss(expInFix);
-    while(!iss.eof(1)){
+
+    while(!iss.eof()){
         std::string str;
         iss >> str;
+
         if (isdigit(str[0]) || str[0] == '.'){
-            std::cout << strtod(str) << " ";
+            std::cout << std::strtod(str.c_str(), NULL) << " ";
         }else{
             switch(str[0]){
                 case '*':
-                    while (ops.top() == '*' || ops.top() == '/'){
+                    while ((!ops.empty()) && (ops.top() == '*' || ops.top() == '/')){
                         std::cout << ops.top() << ' ';
                         ops.pop();
                     }
                     ops.push(str[0]);
                     break;
                 case '/':
-                    while (ops.top() == '*' || ops.top() == '/'){
+                    while ((!ops.empty()) && (ops.top() == '*' || ops.top() == '/')){
                         std::cout << ops.top() << ' ';
                         ops.pop();
                     }
                     ops.push(str[0]);
                     break;
                 case '-':
-                    while (ops.top() == '*' || ops.top() == '/' || ops.top() == '+' || ops.top() == '-'){
+                    while ((!ops.empty()) && (ops.top() == '*' || ops.top() == '/' || ops.top() == '+' || ops.top() == '-')){
                         std::cout << ops.top() << ' ';
-                        ops.pop()
+                        ops.pop();
                     }
                     ops.push(str[0]);
                     break;
                 case '+':
-                    while (ops.top() == '*' || ops.top() == '/' || ops.top() == '+' || ops.top() == '-'){
+                    while ((!ops.empty()) && (ops.top() == '*' || ops.top() == '/' || ops.top() == '+' || ops.top() == '-')){
                         std::cout << ops.top() << ' ';
-                        ops.pop()
+                        ops.pop();
                     }
                     ops.push(str[0]);
                     break;
@@ -88,4 +94,9 @@ void infixtoPostfix(std::string expInFix){
         std::cout << ops.top();
         ops.pop();
     }
+}
+
+int main(){
+    infixtoPostfix("5 * 5 + 12 - 4");
+    return 0;
 }
