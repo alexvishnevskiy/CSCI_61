@@ -98,5 +98,7 @@ void infixtoPostfix(std::string expInFix){
 
 int main(){
     infixtoPostfix("5 * 5 + 12 - 4");
+    std::cout << '\n';
+    evalPostFix("5 3 + 6 2 / * 3 5 * +");
     return 0;
 }
