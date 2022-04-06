@@ -1,5 +1,6 @@
 #include "node.h"
 
+
 node::node(){
     data_ = 0;
     link_ = nullptr;
@@ -8,6 +9,10 @@ node::node(){
 node::node(const int & initdata, node * initlink){
     data_ = initdata;
     link_ = initlink;
+}
+
+node::~node(){
+    link_ = nullptr;
 }
 
 int node::data() const{

@@ -1,4 +1,5 @@
-#include "queue.h"
+#include "queue_array/queue.h"
+#include "queue_linked_list/queue.h"
 #include <iostream>
 
 

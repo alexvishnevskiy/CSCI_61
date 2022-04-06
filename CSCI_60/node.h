@@ -13,6 +13,9 @@ public:
     // post: creates a new node with defaults: data=0 and link=nullptr
     node();
     // pre: none
+    // post: deletes all data
+    ~node();
+    // pre: none
     // post: returns data value stored in this node
     int data() const;
     // pre: none
