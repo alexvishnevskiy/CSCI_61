@@ -66,5 +66,3 @@ void Queue::incCapacity(){
     front_ = 0;
     capacity *= 2;
 }
-
-//add linked list

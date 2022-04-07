@@ -7,8 +7,9 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${fileDirname}/**.cpp",
-                "/Users/alexander/Documents/CSCI_61/week01/seminar01/seminar.cpp",
+                "${fileDirname}/${fileBasenameNoExtension}.cpp",
+                "/Users/alexander/Documents/CSCI_61/CSCI_60/node.cpp",
+                // "/Users/alexander/Documents/CSCI_61/week01/seminar01/seminar.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}.exe"
             ],
@@ -28,8 +29,9 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${fileDirname}/**.cpp",
-                "/Users/alexander/Documents/CSCI_61/week01/seminar01/seminar.cpp",
+                "${fileDirname}/${fileBasenameNoExtension}.cpp",
+                "/Users/alexander/Documents/CSCI_61/CSCI_60/node.cpp",
+                // "/Users/alexander/Documents/CSCI_61/week01/seminar01/seminar.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}.exe"
             ],
