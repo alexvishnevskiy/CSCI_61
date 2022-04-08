@@ -1,4 +1,5 @@
-#include "seminar.h"
+// #include "stack_array/stack.h"
+#include "stack_linked_list/stack.h"
 #include <iostream>
 
 
@@ -14,5 +15,6 @@ int main(){
         std::cout << s.top() << std::endl;
         s.pop();
     }
+    std::cout << s.size();
     return 0;
 }

@@ -1,4 +1,4 @@
-#include "seminar.h"
+#include "stack.h"
 #include <cassert>
 
 

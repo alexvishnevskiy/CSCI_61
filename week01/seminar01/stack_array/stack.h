@@ -1,5 +1,5 @@
-#ifndef SEMINAR_H
-#define SEMINAR_H
+#ifndef STACK_H
+#define STACK_H
 
 #include <cstdlib>
 #include <string>
