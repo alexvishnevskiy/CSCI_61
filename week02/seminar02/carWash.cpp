@@ -19,14 +19,14 @@ public:
     unsigned int car(){
         if (rand() / RAND_MAX <= probability){
             if (rand() / RAND_MAX < 0.5){
-                return 5:
+                return 5;
             }else{
                 return 7;
             }
         }
         return 0;
     }
-}
+};
 
 void controller(){
     Washer w;

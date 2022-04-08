@@ -17,4 +17,4 @@ It is easier to remove from head, so the front of queue in linked list is head a
 
 **For array:**
 Structure is like circular array. If size exceeds capacity it goes cyclic.
-![plot](static/cyclic_array.png)
+![plot](../../static/week02/seminar01/cyclic_array.png)
