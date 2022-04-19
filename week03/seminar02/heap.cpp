@@ -2,6 +2,8 @@
 #include <cassert>
 using namespace std;
 
+// This file contains my realization of MinHeap
+
 class MinHeap{
 private:
     int * data;

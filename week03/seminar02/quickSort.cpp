@@ -4,6 +4,9 @@ using namespace std;
 
 
 int partition(vector<int>& A, int start, int end){
+    if (start == end) //for one element
+        return start;
+
     int pivot = A[start];
     int pivot_index = start;
     int i = start + 1; // we can pick another pivot, for example median
@@ -28,12 +31,12 @@ void QuickSort(vector<int>& A, int start, int end){
     // if (start + 10 <= end) insertionSort(A, start, end); 
     // if there are 10 elements it is likely that list is nearly sorted
     // and it is better to use another algorithm
-    if (start == end){
+    if (start >= end){
         return;
     }else{
         int pivot_index = partition(A, start, end);
         QuickSort(A, start, pivot_index-1);
-        QuickSort(A, pivot_index, end);
+        QuickSort(A, pivot_index+1, end);
     }
 }
 
