@@ -12,6 +12,14 @@ In worst scenario when all elements are sorted already algorithm will work for O
 we call this N times, so T(N) = N^2
 
 So, sometimes people use another algorithm when there are less then 10 elements or so. For example, insertionsort.
+
+**how to do partiotion**
+
+1. Take the median (can be good case, because some of the elements are already to the left of the median, and some of them to the rigth)
+2. Take the first element (can be bad, if sub-array is sorted)
+3. Take the random element 
+4. Take 3/5/7 random elements and then choose median from them (best case)
+
 ![screen-gif](../../static/week03/seminar02/quick_sort_example.gif)
 
 ## Binary Heap
