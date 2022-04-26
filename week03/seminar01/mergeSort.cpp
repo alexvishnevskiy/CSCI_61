@@ -1,4 +1,5 @@
 #include <vector>
+#include <iostream>
 using namespace std;
 
 
@@ -40,4 +41,15 @@ void mergeSort(vector<int>& A, int start, int end){
 
 void mergeSort(vector<int>& A){
     mergeSort(A, 0, A.size()-1);
+}
+
+int main(){
+    vector<int> A;
+    A.push_back(5);
+    A.push_back(3);
+    A.push_back(1);
+    mergeSort(A);
+    for (int i = 0; i < A.size(); i++){
+        cout << A[i] << " ";
+    }
 }
