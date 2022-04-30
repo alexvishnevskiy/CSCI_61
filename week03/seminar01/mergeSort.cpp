@@ -46,8 +46,12 @@ void mergeSort(vector<int>& A){
 int main(){
     vector<int> A;
     A.push_back(5);
-    A.push_back(3);
-    A.push_back(1);
+    A.push_back(19);
+    A.push_back(13);
+    A.push_back(36);
+    A.push_back(23);
+    A.push_back(2);
+    A.push_back(7);
     mergeSort(A);
     for (int i = 0; i < A.size(); i++){
         cout << A[i] << " ";

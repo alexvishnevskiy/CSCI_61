@@ -12,6 +12,21 @@ Hash table should have hash function.
 
 Open address hashing looks for the open spot to store, if the address is occupied, then move one by one to another memory spot.
 
+### Runtime
+            add            find/remove
+    array | O(1)         | O(N)
+    hash  | O(1) -> O(N) | O(1) -> O(N)
+
+**How to avoid collisions?**
+
+We can use linked list for the same index. So, apart from open address hashing we store linked list in the same index.
+    
+    [4]
+     |
+    [2][0]   [6]
+     |  |     |
+    [1][2][3][4]
+
 **How to look for needed index?**
 
 Look for the incoming index until you encounter empty spot. If you encounter empty spot, then there is no this element in the array.
