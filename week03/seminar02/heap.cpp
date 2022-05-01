@@ -101,9 +101,12 @@ int MinHeap::pop(){
     int to_pop = data[0], i = 0;
     swap(data[count-1], data[0]);
 
-    while (children_r(i) < count-1){
+    while (children_r(i) <= count-1){
         int l_child = children_l(i);
         int r_child = children_r(i);
+
+        if (r_child >= count-1)
+            r_child = l_child;
 
         if (min(data[l_child], data[r_child]) < data[i]){
             if (data[l_child] < data[i]){
