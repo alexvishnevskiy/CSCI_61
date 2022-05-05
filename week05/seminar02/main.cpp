@@ -76,13 +76,13 @@ private:
     const int CAP = 811;
     int hash(int key){ return key%CAP; };
     int next(int i){ return (i+1)%CAP; };
-    void clear(){
-        for (int i = 0; i < CAP; i++){
-            data[i] = nullptr;
-            delete data[i];
-        }
-        count = 0;
-    }
+    // void clear(){
+    //     for (int i = 0; i < CAP; i++){
+    //         if (data[i])
+    //             delete data[i];
+    //     }
+    //     count = 0;
+    // }
     void copy(const bag& b){
         for (int i = 0; i < b.CAP; i++){
             data[i] = b.data[i];
@@ -100,9 +100,9 @@ public:
         copy(other);
     }
 
-    ~bag(){
-        clear();
-    }
+    // ~bag(){
+    //     clear();
+    // }
 
     void add(hashdata& x){
         assert (count < CAP);
