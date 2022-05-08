@@ -31,7 +31,7 @@ void QuickSort(vector<int>& A, int start, int end){
     // if (start + 10 <= end) insertionSort(A, start, end); 
     // if there are 10 elements it is likely that list is nearly sorted
     // and it is better to use another algorithm
-    if (start <= end){ // when two element there is a case when partion - 1 < start
+    if (start <= end){ // when two element there is a case when (pivot - 1) < start
                        // for example [0, 14]
         return;
     }else{
