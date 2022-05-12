@@ -111,13 +111,14 @@ int MinHeap::pop(){
         if (min(data[l_child], data[r_child]) < data[i]){
             if (data[l_child] < data[i]){
                 swap(data[l_child], data[i]);
+                i = l_child;
             }else{
                 swap(data[r_child], data[i]);
+                i = r_child;
             }
         }else{
             break;
         }
-        i++;
     }
     count--;
     return to_pop;
