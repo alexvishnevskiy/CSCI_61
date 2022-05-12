@@ -31,7 +31,7 @@ void QuickSort(vector<int>& A, int start, int end){
     // if (start + 10 <= end) insertionSort(A, start, end); 
     // if there are 10 elements it is likely that list is nearly sorted
     // and it is better to use another algorithm
-    if (start <= end){ // when two element there is a case when (pivot - 1) < start
+    if (start >= end){ // when two element there is a case when (pivot - 1) < start
                        // for example [0, 14]
         return;
     }else{
@@ -45,14 +45,19 @@ void QuickSort(vector<int>& A, int start, int end){
 int main(){
     vector<int> a;
 
-    a.push_back(14);
-    a.push_back(0);
-    // a.push_back(1);
-    // a.push_back(2);
-    QuickSort(a, 0, 1);
+    a.push_back(7);
+    a.push_back(7);
+    a.push_back(7);
+    a.push_back(3);
+    a.push_back(9);
+    a.push_back(11);
+    a.push_back(1);
+    a.push_back(7);
+    a.push_back(7);
+    QuickSort(a, 0, 8);
 
-    // for (int x: a){
-    //     cout << x << " ";
-    // }
+    for (int x: a){
+        cout << x << " ";
+    }
     return 0;
 }
