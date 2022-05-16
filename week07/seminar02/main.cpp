@@ -86,17 +86,7 @@ public:
     void remove(int x){
         // find a node for value x
         node * p = _find(x);
-        if (isLeaf(p)){
-            node * pp = find_parent(p);
-            if (!pp)
-                delete root;
-            else{
-                if (pp->left == p)
-                    delete pp->left;
-                else
-                    delete pp->right;
-            }
-        }
+
         if (p){
             // find first leaf for p
             node * leaf = findleaf(p);
@@ -104,12 +94,16 @@ public:
             p->data = leaf->data;
             // find the parent of the leaf
             node * pleaf = find_parent(leaf);
-            // if leaf is the left child -> delete
-            if (pleaf->left == leaf)
-                delete pleaf->left;
-            // if leaf is the right child -> delete
-            else
-                delete pleaf->right;
+            if (!pleaf)
+                delete root;
+            else{
+                // if leaf is the left child -> delete
+                if (pleaf->left == leaf)
+                    delete pleaf->left;
+                // if leaf is the right child -> delete
+                else
+                    delete pleaf->right;
+            }
         }
     }
 };
