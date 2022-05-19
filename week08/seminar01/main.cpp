@@ -8,7 +8,7 @@ struct node{
 
 
 bool find(int x, node * p){
-    if (p == nullptr) return false;
+    if (!p) return false;
     if (p->data) return true;
     else if (p->data < x)
         return find(x, p->right);
@@ -17,11 +17,11 @@ bool find(int x, node * p){
 }
 
 void insert(int x, node *& p){//we use call by reference because we modify pointer
-    if (p == nullptr)
+    if (!p)
         p = new node(x);
     
     if (p->data < x)
-        insert(x, p->data);
+        insert(x, p->right);
     else if (x < p->data)
         insert(x, p->left);
     else
