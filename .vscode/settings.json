@@ -2,6 +2,11 @@
     "files.associations": {
         "vector": "cpp",
         "iostream": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "iosfwd": "cpp",
+        "iterator": "cpp",
+        "__tree": "cpp",
+        "bitset": "cpp",
+        "set": "cpp"
     }
 }
