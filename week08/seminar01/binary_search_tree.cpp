@@ -2,7 +2,7 @@ struct node{
     int data;
     node * left;
     node * right;
-    node (int val): data(val) {;};
+    node (int val): data(val) {};
 };
 
 
