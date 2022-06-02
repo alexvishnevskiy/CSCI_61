@@ -49,3 +49,5 @@ The first two operations require only a small constant amount of time with the a
 On the other hand, the third operation is efficient for edge list and edge set, because it takes O(e), where e is the number of edges that have vertex i. But with an adjacency matrix, the third operation requires O(N), because it should traverse the entire row.
 
 Also, if each vertex has only a few edges(sparse graph), then an adjacency matrix is mostly wasted space with the value false.
+
+Code: https://github.com/alexvishnevskiy/CSCI_61/tree/master/week08/seminar02

@@ -25,3 +25,5 @@ We can traverse the tree using queue. Push to queue childs every time we hit par
 We go one level by level. When we encounter parent node, we put it in the queue.
 ![traverse 1](../../static/week02/seminar02/traverse1.jpeg)
 ![traverse 2](../../static/week02/seminar02/traverse2.jpeg)
+
+Code: https://github.com/alexvishnevskiy/CSCI_61/tree/master/week02/seminar02

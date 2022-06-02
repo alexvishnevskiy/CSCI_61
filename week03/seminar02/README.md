@@ -32,3 +32,5 @@ When we add value to a tree we should contain the structure of the heap. So we s
 
 ![heap1](../../static/week03/seminar02/heap1.jpg)
 ![heap2](../../static/week03/seminar02/heap2.jpg)
+
+Code: https://github.com/alexvishnevskiy/CSCI_61/tree/master/week03/seminar02

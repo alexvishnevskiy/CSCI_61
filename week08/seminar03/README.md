@@ -43,3 +43,5 @@ The answer is yes! After finding the root node, we can update the parent node of
 
 Implementation of the “disjoint set” is optimized with both “path compression” and “union by rank”.
 ![optimized](../../static/week08/optimized.png)
+
+Code: https://github.com/alexvishnevskiy/CSCI_61/tree/master/week08/seminar03

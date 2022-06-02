@@ -8,3 +8,5 @@ In the realization, we can add priorities to our queue as well as data.
 **How to build a heap un a linear time?**
 
 https://youtu.be/MiyLo8adrWw
+
+Code: https://github.com/alexvishnevskiy/CSCI_61/tree/master/week04/seminar01

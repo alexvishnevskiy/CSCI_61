@@ -43,3 +43,5 @@ How to find using O(1)?
 We can use hash functions and arrays.
 
 data[hash(str)] = ?
+
+Code: https://github.com/alexvishnevskiy/CSCI_61/tree/master/week05/seminar01

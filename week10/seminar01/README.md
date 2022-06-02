@@ -18,3 +18,5 @@ vertex a -> look at all neightbours
 4. Mark the vertex as unavailable(visited).
 
 5. Repeat 2-4 until N-1 iteration, N - number of vertices.
+
+Code: https://github.com/alexvishnevskiy/CSCI_61/tree/master/week10/seminar01

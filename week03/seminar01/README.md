@@ -10,3 +10,5 @@ T(N) = 2T(N/2) + O(N)
 ![runtime](../../static/week03/seminar01/runtime.jpg)
 ### Example
 ![visualize](../../static/week03/seminar01/visualize.jpg)
+
+Code: https://github.com/alexvishnevskiy/CSCI_61/tree/master/week03/seminar01

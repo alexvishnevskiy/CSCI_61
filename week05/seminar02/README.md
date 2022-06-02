@@ -42,3 +42,5 @@ We can, but we should re-hash. So it's better not to increase the capacity.
 **How to check if the spot doesn't have any data?**
 
 We can use pointers and check. Or we can use some euristhics.
+
+Code: https://github.com/alexvishnevskiy/CSCI_61/tree/master/week05/seminar02

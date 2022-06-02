@@ -22,3 +22,5 @@ To sort an array of size n in ascending order:
 ![insertion_add](../../static/week02/seminar03/insertionsort1.png)
 ### Random sort - Naive sort
     Just run randomly O(N!)
+
+Code: https://github.com/alexvishnevskiy/CSCI_61/tree/master/week02/seminar03

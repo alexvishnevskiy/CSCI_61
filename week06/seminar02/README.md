@@ -20,3 +20,5 @@ How can we traverse a tree?
 
 How to make a tree from an array?
 ![btree3](../../static/week06/b_tree3.jpg)
+
+Code: https://github.com/alexvishnevskiy/CSCI_61/tree/master/week06/seminar02
