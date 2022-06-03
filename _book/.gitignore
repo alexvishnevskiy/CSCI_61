@@ -34,3 +34,5 @@
 #some other stuff
 *.plist
 *.SD_Store
+node_modules
+.vscode
