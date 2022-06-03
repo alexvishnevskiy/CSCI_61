@@ -110,7 +110,7 @@ pair<int, vector<int> > dijkstra_heap(vector< vector<int> > graph, int source, i
         parents[i] = i;
     }
 
-    for (int i = 0; i < n - 1; i++){
+    while (!pq.empty()){
         // find smallest
         pair<int, int> p = pq.top(); pq.pop();
         int index = p.second;
