@@ -9,7 +9,7 @@ int partition(vector<int>& A, int start, int end){
 
     int pivot = A[start];
     int pivot_index = start;
-    int i = start + 1; // we can pick another pivot, for example median
+    int i = start + 1;
     int j = end;
     
     while (i <= j) {
@@ -23,7 +23,7 @@ int partition(vector<int>& A, int start, int end){
             swap(A[i], A[j]);
         }
     }
-    swap(A[pivot_index], A[j]);
+    swap(A[pivot_index], A[j]); // swap with the last element that is less then pivot
     return j; // return pivot location
 }
 
@@ -54,6 +54,23 @@ int medianPartition(vector<int>& A, int start, int end) {
     return j; // return pivot location
 }
 
+int partitionLast(vector<int>& A, int start, int end){
+    int pivot = A[end];
+    int p = start; // pointer to keep track of elements that need swap
+
+    for (int i = start; i < end; i++){
+        //iterate through array p will be pointing to the last element < pivot
+        //if we found element >= pivot, we swap elements to maintain order
+        if (A[i] < pivot){
+            swap(A[p], A[i]); 
+            p++;
+        }
+    }
+    // finally swap with pivot to place it in the right position
+    swap(A[p], A[end]);
+    return p;
+}
+
 void QuickSort(vector<int>& A, int start, int end){
     // if (start + 10 <= end) insertionSort(A, start, end); 
     // if there are 10 elements it is likely that list is nearly sorted
@@ -62,7 +79,7 @@ void QuickSort(vector<int>& A, int start, int end){
                        // for example [0, 14]
         return;
     }else{
-        int pivot_index = medianPartition(A, start, end);
+        int pivot_index = partitionLast(A, start, end);
         QuickSort(A, start, pivot_index-1);
         QuickSort(A, pivot_index+1, end);
     }
